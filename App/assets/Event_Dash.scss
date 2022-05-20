@@ -1,0 +1,18 @@
+@import "_globals";
+@import "_header";
+@import "_footer";
+@import "_animations";
+@import "_variables";
+@import "_mixins";
+@import "_Dash";
+
+
+.age-range-slider{
+    width: 300px;
+}
+
+.range-slider-table-entry{
+    display: flex;
+    flex-direction: row;
+    min-width: 300px;
+}

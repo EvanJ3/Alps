@@ -1,0 +1,275 @@
+
+@import "_mixins";
+@import "_variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0 0 0 0;
+    padding: 0;
+    line-height: 1.3;
+    font-size: $font-med;
+    color: rgb(185, 174, 174);
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right, #ffffff, #f2f2f2, #e4e4e4, #d7d7d7, #cacaca, #cacaca, #cacaca, #cacaca, #d7d7d7, #e4e4e4, #f2f2f2, #ffffff);
+
+
+    &.noscroll{
+        overflow: hidden; 
+    }
+}
+
+a, a:visited, a:hover{
+    text-decoration: none;
+    color: rgb(185, 174, 174);
+}
+
+//Spacing
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.center-fluid-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.content-center-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lead-text{
+    color: black;
+    text-align: center;
+}
+
+.lead-text-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.lead-heading{
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+.col{
+    flex: 0 0 auto;
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    box-sizing: border-box;
+
+}
+
+.text-container{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
+    &.light-text{
+        font-weight: 300;
+
+    }
+
+    &.bold-text{
+        font-weight: 600;
+    }
+
+    &.italic{
+        font-style: italic;
+    }
+
+    &.center{
+        text-align: center;
+    }
+
+}
+
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+
+    &-jc-l{
+        justify-content: left;
+    }
+
+    &-jc-r{
+        justify-content: right;
+    }
+
+    
+
+}
+
+
+
+@media only screen and (max-width:63.9378em){ 
+    .nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $team-usa-blue;
+    }
+}
+
+@media only screen and (min-width:64em){ 
+    .nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $team-usa-blue;
+        
+    }
+}
+
+button, .button{
+    padding: 1rem 1.875rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: $team-usa-blue;
+    color:white;
+
+}
+
+//Visibility
+
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+.nav-logo{
+    height: 60px;
+}
+
+.nav-logo-hidden{
+    opacity: 0;
+}
+
+.title-shelf-heading{
+    color: black;
+    text-align: center;
+}
+
+.title-shelf-text{
+    color: black;
+    text-align: center;
+}
+
+.title-shelf-text-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.title-shelf{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.upload-text{
+    text-align: center;
+    color: black;
+}
+
+.upload-link-text{
+    text-align: center;
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
+.upload-container{
+    width: 50%;
+    height: 60px;
+    line-height:60px;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    color:black;
+}
+
+.upload-shelf{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+
+    > button{
+        background-color: $team-usa-blue;
+    }
+}
+
+.kernel-slider{
+    width: 100%;
+}

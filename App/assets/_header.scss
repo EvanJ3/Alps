@@ -1,0 +1,72 @@
+@import "_variables";
+@import "_animations";
+
+.header{
+
+    .overlay{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top:0px;
+        right: 0px;
+        bottom:0px;
+        left: 0px;
+        height: 100vh;
+        background-image: linear-gradient(rgba(112, 112, 112, 0.986),rgba(255, 255, 255, 0.3));
+        z-index: 10;
+    }
+
+    nav{
+        position: relative;
+        background-color:$team-usa-blue;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        z-index: 10;
+
+        a {
+            font-family: urw-din-condensed,Arial,sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            position: relative;
+
+
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 3px;
+                background: white;
+                left: 0;
+                right: 0;
+                bottom: -10px;
+                opacity: 0;
+                transition: opacity 400ms ease-in-out;
+            }
+
+            &:hover{
+                color:white;
+                transition: color 300ms ease-in-out;
+                &::before{
+                    opacity: 1;
+                }
+            }
+            &:last-child{
+
+                margin-right: 32px;
+            }
+    }
+}
+
+    &__logo{
+
+        
+        img {
+            height: 60px;
+            position: relative;
+
+        }
+    }
+}
+
+
+

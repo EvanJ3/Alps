@@ -1,0 +1,95 @@
+@import "_globals";
+@import "_header";
+@import "_footer";
+@import "_animations";
+@import "_variables";
+@import "_mixins";
+@import "_Dash";
+
+
+#athlete_bio_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 40%;
+    border-radius: 25px;
+    color: white;
+    opacity: 1;
+    background-image: url('./images/alps_bg_filter.png');
+    background-repeat: no-repeat;
+    font-family: urw-din-condensed,Arial,sans-serif;
+    background-position: center center;
+    background-size: cover;
+}
+
+#athlete_bio_title{
+    color: #fdfdfe;
+    text-align: center;
+    margin-bottom: 7px;
+    margin-top:20px;
+}
+
+.bio-field-name{
+    color: white;
+    font-weight: bold;
+}
+
+.bio-field-value{
+    color: rgb(160, 160, 160);
+    padding-left: 5px;
+}
+
+.bio-col-title{
+    color: white;
+    font-weight: bold;
+}
+
+#athlete_bio_country_flag{
+    width: 40px;
+    height: 25px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+#athlete_bio_seperator{
+    width: 40%;
+    background-color: #fdfdfe;
+    opacity: .4;
+    height: 3px;
+}
+
+.athlete-bio-list-value{
+    padding-left: 20px;
+    width: 70%;
+}
+
+.athlete-bio-list-label{
+    display: inline-block;
+    min-width: 30%;
+}
+
+.athlete-bio-list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 5em;
+    padding-right: 2em;
+    padding-left:2em;
+    padding-top: 10px;
+}
+
+
+#podium_radio_button > *{
+    display: block;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: medium;
+}
+
+#select_season{
+    width: 90%;
+    margin-top: -55px;
+}
